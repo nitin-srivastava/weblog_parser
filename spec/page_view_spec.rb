@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative 'spec_helper'
 require_relative '../lib/page_view'
 require_relative '../lib/parser'
 RSpec.describe PageView do

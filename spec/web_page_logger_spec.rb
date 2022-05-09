@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative 'spec_helper'
 require_relative '../lib/web_page_logger'
 
 RSpec.describe WebPageLogger do
