@@ -20,7 +20,7 @@ Go to the project directory and run
 $ ruby weblog_parser.rb webserver.log
 ```
 
-#### Run Test
+#### Run Test (Rspec)
 Go to the project directory and run
 
 ```
@@ -33,6 +33,10 @@ Go to the project directory and run
 ```
 $ bundle exec rubocop
 ```
+### Test coverage (Simplecov)
+To see the test coverage, please run the above **rspec** from project directory and open the `coverage/index.html` file in browser. I have achieved 100% test coverage (see attached screenshot).
+![test_coverage](https://user-images.githubusercontent.com/24418296/167449901-fd9acd07-3002-46fc-ab42-143ea68af1c5.jpg)
+
 
 ## Tools
 I used below tools to help with development
