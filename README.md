@@ -11,6 +11,7 @@ This app has been developed in ruby version `3.0.0`
 You must have bundler version `2.2.3`. Run the below command to install it.
 ```
 $ gem install bundler:2.2.3
+$ bundle install
 ```
 
 #### Run
