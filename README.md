@@ -44,3 +44,71 @@ I used below tools to help with development
 - **Rspec**: for integration and unit test.
 - **Rubocop**: to help with the syntax according to the ruby style guide.
 - **Simplecov**: for test coverage.
+
+## Run aaplication (Input/Output)
+Go to the project directory and use below command to run the app.
+```
+$ ruby weblog_parser.rb webserver.log
+```
+**Output**
+```
+Total Visits
+==============================
+/about/2 90 visits.
+/contact 89 visits.
+/index 82 visits.
+/about 81 visits.
+/help_page/1 80 visits.
+/home 78 visits.
+==============================
+
+Unique Views
+==============================
+/contact 23 unique views.
+/help_page/1 23 unique views.
+/home 23 unique views.
+/index 23 unique views.
+/about/2 22 unique views.
+/about 21 unique views.
+==============================
+```
+### Error Handling (Edge cases)
+#### 1. When given file doesn't exist.
+
+```
+$ ruby weblog_parser.rb test.log
+```
+**Output**
+```
+Error:: file doesn't exist.
+```
+
+#### 2. When log file is empty.
+
+```
+$ ruby weblog_parser.rb spec/fixtures/files/empty_webserver.log
+```
+**Output**
+```
+Error:: log file is empty.
+```
+
+#### 3. When log file has invalid data format.
+
+```
+$ ruby weblog_parser.rb spec/fixtures/files/ivalid_webserver_data.log
+```
+**Output**
+```
+Error:: file has invalid data format.
+```
+
+#### 4. When log file has invalid file extension (not .log file).
+
+```
+$ ruby weblog_parser.rb spec/fixtures/files/ivalid_file_format.txt
+```
+**Output**
+```
+Error:: invalid file extension. Only .log file accepted.
+```

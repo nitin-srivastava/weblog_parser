@@ -2,4 +2,8 @@
 
 require_relative 'lib/web_page_logger'
 
-WebPageLogger.new(ARGV[0]).call
+begin
+  WebPageLogger.new(ARGV[0]).call
+rescue => e
+  puts "Error:: #{e}"
+end
